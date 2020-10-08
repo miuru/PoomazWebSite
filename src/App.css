@@ -1,0 +1,124 @@
+.Main {
+  position:fixed;
+  top:0;
+  left:0;
+  width: 100%;
+  background-color: transparent;
+}
+
+.SectionContainer {
+  margin-top: 10%;
+}
+
+.Sub {
+  position: relative;
+  overflow-y: scroll;
+  height: 95vh;
+}
+
+.regular {
+  color: white;
+  font-family: "Montserrat","sans-serif";
+}
+
+.light {
+  font-family: "Montserrat Light","sans-serif";
+  color: white;
+}
+
+.NavItem {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.NavItem  {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.active {
+  border-bottom: 3px solid #6AFBBD;
+  border-radius: 2px;
+}
+
+.exploreBtn {
+  background-color: #6D9D88;
+  border-radius: 32px;
+  padding: 10px 40px;
+  font-family: 'Montserrat', sans-serif;
+  color: white;
+  text-decoration: none;
+  transition: background-color 0.5s ease;
+}
+
+.exploreBtn:hover {
+  text-decoration: none;
+  color: white;
+  background-color: #517364;
+}
+
+.LeafHome {
+  position: absolute;
+  left:-5%;
+  top:15%;
+  z-index: -1;
+  height:80vh;
+}
+
+.LeafSystem {
+  position: absolute;
+  right:0vw;
+  z-index: -1;
+  height:80vh;
+}
+
+.LeafMethodology {
+  position: absolute;
+  left:-5%;
+  z-index: -1;
+  height:80vh;
+}
+
+.LeafAchievements {
+  position: absolute;
+  right:0vw;
+  z-index: -1;
+  height:80vh;
+}
+
+.LeafAbout {
+  position: absolute;
+  left:-5%;
+  z-index: -1;
+  height:80vh;
+}
+
+.flipped {
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+}
+
+.tile {
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+.subTile {
+  padding:50px;
+}
+
+.tickedList {
+  list-style: none;
+}
+
+.listElem:before {
+  content:'';
+  display: inline-block;
+  background-image: url('./assets/img/check.svg');
+  height: 40px;
+  width: 40px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  vertical-align: middle;
+  margin-right:1em;
+}
