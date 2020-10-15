@@ -12,8 +12,8 @@ import {
 
 import Leaf from '../assets/img/LEAF.png';
 import Home from "./Home/Home";
-import System from './Methodology/Methodology';
-import Methodology from "./Visits/Methodology";
+import System from './Accomodations/Accomodations';
+import Vists from "./Visits/Vists";
 import Achievements from "./Achievements/Achievements";
 import About from "./About/About";
 
@@ -28,7 +28,8 @@ class Main extends Component {
             systemActive:false,
             methodologyActive:false,
             achieveActive:false,
-            contactActive:false
+            contactActive:false,
+            count:0
         }
         this.toggleNav= this.toggleNav.bind(this);
         this.waypointReached = this.waypointReached.bind(this);
@@ -38,14 +39,26 @@ class Main extends Component {
         switch (wp) {
             case 1:
                 this.setState({
-                    homeActive:true, systemActive:false, methodologyActive:false, achieveActive:false, contactActive:false
+                    homeActive:true, systemActive:false, methodologyActive:false, achieveActive:false, contactActive:false,count:1
                 });
                 break;
             case 2:
-                this.setState({
-                    homeActive:false, systemActive:true, methodologyActive:false, achieveActive:false, contactActive:false
-                });
-                break;
+                if(this.state.count == 1){
+                    this.setState({
+                        homeActive:true, systemActive:false, methodologyActive:false, achieveActive:false, contactActive:false,count:0
+                    });
+                    break;
+                }
+                else {
+                    this.setState({
+                        homeActive: false,
+                        systemActive: true,
+                        methodologyActive: false,
+                        achieveActive: false,
+                        contactActive: false
+                    });
+                    break;
+                }
             case 3:
                 this.setState({
                     homeActive:false, systemActive:false, methodologyActive:true, achieveActive:false, contactActive:false
@@ -74,7 +87,7 @@ class Main extends Component {
     }
 
     componentDidMount() {
-        document.body.style.background = "#102127";
+        document.body.style.background = "#040511";
         AOS.init();
         let scrollRef = 0;
 
@@ -93,11 +106,12 @@ class Main extends Component {
     }
 
     render() {
+
         return (
             <div>
                 <div className={'Main'}>
                     <Navbar dark expand="md">
-                        <a href="/"><img height={'100%'} width={'50%'} alt={'The AI driven smart bin'} src={Logo}/></a>
+                        <a href="/"><img height={'100%'} width={'50%'} alt={'Poomaz Peace Palace'} src={Logo}/></a>
                         <NavbarToggler onClick={()=>{this.toggleNav()}} />
                         <Collapse style={{marginLeft:'25%',transform:'translate(-25%,0)'}} isOpen={this.state.navBarOpen} navbar>
                             <Nav navbar>
@@ -108,7 +122,7 @@ class Main extends Component {
                                     <NavLink href="#SystemOverview">Accommodation</NavLink>
                                 </NavItem>
                                 <NavItem active={this.state.methodologyActive} className={"NavItem"}>
-                                    <NavLink href="#Methodology">Places to Visit</NavLink>
+                                    <NavLink href="#Vists">Places to Visit</NavLink>
                                 </NavItem>
                                 <NavItem active={this.state.achieveActive} className={"NavItem"}>
                                     <NavLink href="#Achievements">Achievements</NavLink>
@@ -142,11 +156,11 @@ class Main extends Component {
                             <div className={'LeafMethodology'} data-aos="fade-right">
                                 <img src={Leaf} height={'100%'} alt={"Leaf ClipArt"}/>
                             </div>
-                            <div id={'Methodology'}>
+                            <div id={'Vists'}>
                                 <Waypoint
                                     onEnter={()=>{this.waypointReached(3)}}
                                 />
-                                <Methodology/>
+                                <Vists/>
                                 <Waypoint
                                     onEnter={()=>{this.waypointReached(3)}}
                                 />

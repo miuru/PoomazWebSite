@@ -1,7 +1,7 @@
-# Website for the AI Driven Smart waste bin
+# Website for Poomaz Peace Palace Ella
 
-*A Single page minimal website for project demonstration.*
-*By 2020-130 Group*
+*A Single page minimal website*
+*By Miuru Shalinda*
 
 Used technologies and modules
 * React JS

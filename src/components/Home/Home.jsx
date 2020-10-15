@@ -18,6 +18,7 @@ class Home extends Component {
             autoplaySpeed: 5000,
             slidesToShow: 1,
             autoplay: true,
+
             appendDots: dots => {
                 return <MagicSliderDots dots={dots} numDotsToShow={5} dotWidth={30}/>;
             }

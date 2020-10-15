@@ -15,10 +15,7 @@ import image6 from '../../../assets/img/Methodology/Implementation/6.png';
 import thumb6 from '../../../assets/img/Methodology/Implementation/thumbs/6.png';
 import image7 from '../../../assets/img/Methodology/Implementation/7.png';
 import thumb7 from '../../../assets/img/Methodology/Implementation/thumbs/7.png';
-import image8 from '../../../assets/img/Methodology/Implementation/8.jpg';
-import thumb8 from '../../../assets/img/Methodology/Implementation/thumbs/8.jpg';
-import image9 from '../../../assets/img/Methodology/Implementation/9.jpg';
-import thumb9 from '../../../assets/img/Methodology/Implementation/thumbs/9.jpg';
+
 
 const images = [
     {
@@ -49,23 +46,13 @@ const images = [
     {
         original: image6,
         thumbnail: thumb6,
-        description :'Bogoda wooden bridge',
+        description :'Adisham Bungalow',
     },
     {
         original: image7,
         thumbnail: thumb7,
         description :'Kinnellan Tea Factory',
     },
-    // {
-    //     original: image8,
-    //     thumbnail: thumb8,
-    //     description :'Mounting the Arduino Mega and the Power distribution board to the bin',
-    // },
-    // {
-    //     original: image9,
-    //     thumbnail: thumb9,
-    //     description :'LEDs that are used to notify the status of the bin',
-    // },
 ];
 
 class Implementation extends Component {

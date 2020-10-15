@@ -3,7 +3,7 @@ import React, {Component} from 'react';
 import Implementation from "./implementation/implementation";
 
 
-class Methodology extends Component {
+class Vists extends Component {
     render() {
         return (
             <div className="container">
@@ -16,4 +16,4 @@ class Methodology extends Component {
     }
 }
 
-export default Methodology;
+export default Vists;
